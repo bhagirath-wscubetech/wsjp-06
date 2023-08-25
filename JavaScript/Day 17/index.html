@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .parent {
+            width: 600px;
+            height: 300px;
+            border: 2px black solid;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .img-item {
+            width: 50%;
+            margin: 5px;
+            transition: 1s;
+            transform: translateY(0px);
+        }
+
+        button {
+            font-size: 30px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <img src="img/1.jpg" alt="" class="img-item">
+        <img src="img/2.jpg" alt="" class="img-item">
+        <img src="img/3.jpg" alt="" class="img-item">
+        <img src="img/4.jpg" alt="" class="img-item">
+    </div>
+    <button onclick="next()">Next</button>
+    <button onclick="prev()">Prev</button>
+
+    <script>
+        var items = document.querySelectorAll(".img-item");
+        var current = 0;
+        function next() {
+            if (current == items.length - 2) return;
+            current++;
+            for (item of items) {
+                // console.log(item);
+                item.style.transform = `translateX(-${current * 100}%)`
+            }
+        }
+
+        function prev() {
+            if (current == 0) return;
+            current--;
+            for (item of items) {
+                // console.log(item);
+                item.style.transform = `translateX(-${current * 100}%)`
+            }
+        }
+
+        setInterval(
+            next, 5000
+        )
+    </script>
+</body>
+
+</html>

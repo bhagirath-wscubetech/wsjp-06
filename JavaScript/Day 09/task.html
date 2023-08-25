@@ -1,0 +1,14 @@
+<script>
+    for (var k = 50; k <= 100; k++) {
+        var isPrime = true;
+        for (var i = 2; i < k; i++) {
+            if (k % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime == true) {
+            console.log(k);
+        }
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first {
+            width: 800px;
+            height: 100px;
+            font-size: 50px;
+            border: 1px red solid;
+        }
+
+        #second {
+            width: 800px;
+            height: 100px;
+            font-size: 50px;
+            border: 1px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first">
+        <b style="color:red">Hi</b>
+        <i> Hello Everyone! How are you? </i>
+    </div>
+    <button onclick="moveIt()">Move</button>
+    <div id="second">
+
+    </div>
+
+    <script>
+        var firstBox = document.getElementById("first");
+        var secondBox = document.getElementById("second");
+
+        function moveIt() {
+            secondBox.innerHTML = firstBox.innerHTML;
+            firstBox.innerHTML = ""; // empty
+        }
+    </script>
+</body>
+
+</html>

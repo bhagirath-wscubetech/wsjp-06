@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: arial;
+            height: 100vh;
+            display: flex;
+            background: #34495e;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            border-radius: 5px;
+            width: 600px;
+            height: 600px;
+            padding: 5px;
+            background: white;
+        }
+
+        .box input {
+            font-size: 20px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #34495e;
+        }
+
+        .box input:focus {
+            outline: none;
+        }
+
+        #todo {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #todo li {
+            position: relative;
+            margin: 20px;
+            padding: 10px;
+            transition: 0.4s;
+            background: lightblue;
+        }
+
+        #todo li i {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* .bg-danger{
+            background: lightcoral;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" id="inp">
+        <ul id="todo">
+        </ul>
+    </div>
+    <script>
+        var inp = document.querySelector("#inp");
+        var todo = document.querySelector("#todo");
+        function removeMe(cross) {
+            cross.parentNode.remove();
+        }
+
+        inp.addEventListener(
+            "keyup",
+            function (event) {
+                if (event.key == "Enter") {
+                    var data = event.target.value;
+                    todo.innerHTML += `
+                    <li>
+                        ${data}
+                         <i class="fa fa-times" onmouseenter="toggleHighLight(1,this)" onmouseleave="toggleHighLight(0,this)" onclick="removeMe(this)"></i>
+                    </li>
+                    `;
+                    event.target.value = "";
+                }
+            }
+        )
+
+        function toggleHighLight(flag, cross) {
+            console.log(flag)
+            console.log(cross.parentNode)
+            if (flag == 1) {
+                cross.parentNode.style.background = "lightcoral"
+            } else {
+                cross.parentNode.style.background = ""
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/959eda728d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

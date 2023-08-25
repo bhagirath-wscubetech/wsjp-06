@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="password" id="pass">
+    <button onclick="togglePass(this)">
+        Show Password
+    </button>
+    <script>
+        var passBox = document.getElementById("pass");
+        function togglePass(btn) {
+            if (passBox.type == "password") { //get
+                passBox.type = "text";
+                passBox.style.color = "red";
+                passBox.style.borderColor = "red";
+                btn.innerText = "Hide Password";
+            } else {
+                passBox.type = "password";
+                passBox.style.color = "";
+                passBox.style.borderColor = "";
+                btn.innerText = "Show Password";
+            }
+        }
+    </script>
+</body>
+
+</html>

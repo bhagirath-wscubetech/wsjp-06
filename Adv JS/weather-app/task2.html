@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function test(data) {
+            try {
+                data.forEach(
+                    (d, i) => {
+                        console.log(d, i);
+                    }
+                )
+            } catch (err) {
+                console.log("Please enter an array only");
+            }
+
+        }
+
+        var a = [2, 4, 6];
+        // var a = 3;
+        test(a);
+    </script>
+</body>
+
+</html>

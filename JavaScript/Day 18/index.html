@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .parent {
+            width: 1000px;
+            min-height: 500px;
+            box-shadow: 0px 0px 3px grey;
+            margin: auto;
+        }
+
+        input {
+            margin: 10px 50px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <!-- <input type="text" id="inp"> -->
+        <select id="inp">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="Q">Q</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+            <option value="T">T</option>
+            <option value="U">U</option>
+            <option value="V">V</option>
+            <option value="W">W</option>
+            <option value="X">X</option>
+            <option value="Y">Y</option>
+            <option value="Z">Z</option>
+        </select>
+
+        <button onclick="addItems()">Add</button>
+        <ul id="itemBox">
+
+        </ul>
+    </div>
+    <script>
+        var inpBox = document.querySelector("#inp");
+        var itemBox = document.querySelector("#itemBox");
+        const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+        function addItems() {
+            var total = alphabet.indexOf(inpBox.value);
+            var start = 0;
+            var holder = setInterval(
+                function () {
+                    if (start == total) {
+                        clearInterval(holder); // calling
+                    }
+                    itemBox.innerHTML += `<li> Item ${alphabet[start]} </li>`;
+                    start++;
+                },
+                1000
+            )
+        }
+    </script>
+</body>
+
+</html>

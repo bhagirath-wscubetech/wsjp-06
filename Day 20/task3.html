@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Verdana;
+        }
+
+        .box {
+            width: 400px;
+            height: 600px;
+            box-shadow: 0px 0px 4px grey;
+            margin: auto;
+            padding: 10px;
+            text-align: justify;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .top {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            background: rgb(115, 47, 47);
+            color: white;
+        }
+
+        .box:hover .top {
+            background: white;
+            color:
+                black;
+        }
+
+        .box:hover .overlay {
+            transform: scale(2,2);
+        }
+        .bottom{
+            transition: 0.5s;
+        }
+        .box:hover .bottom{
+            color: white;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 60%;
+            transform: scale(0,0);
+            background: rgb(115, 47, 47);
+            position: absolute;
+            transition: 0.5s;
+            top: -100px;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="overlay"></div>
+        <div class="top">
+            <h1>1</h1>
+        </div>
+        <div class="bottom">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ipsa officia impedit harum molestias.
+                Impedit eligendi suscipit maxime doloremque id eveniet assumenda repellendus ab deleniti, magni dolore,
+                quidem ipsum tenetur.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ipsa officia impedit harum molestias.
+                Impedit eligendi suscipit maxime doloremque id eveniet assumenda repellendus ab deleniti, magni dolore,
+                quidem ipsum tenetur.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ipsa officia impedit harum molestias.
+                Impedit eligendi suscipit maxime doloremque id eveniet assumenda repellendus ab deleniti, magni dolore,
+                quidem ipsum tenetur.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ipsa officia impedit harum molestias.
+                Impedit eligendi suscipit maxime doloremque id eveniet assumenda repellendus ab deleniti, magni dolore,
+                quidem ipsum tenetur.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

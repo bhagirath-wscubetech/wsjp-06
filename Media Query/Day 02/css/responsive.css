@@ -1,0 +1,23 @@
+@media (min-width:768px){
+    .top-box{
+        display: flex;
+    }
+    #menu{
+        color: black;
+        position: static;
+        padding: unset;
+        flex-direction: row;
+        background: unset;    
+        width: unset;
+        height: unset;
+    }
+    #bars{
+        display: none;
+    }
+    .banner-content h1{
+        font-size: 72px;
+    }
+    .banner {
+        height: 750px;
+    }
+}

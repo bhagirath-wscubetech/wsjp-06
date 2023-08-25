@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .form-row {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="form-row">
+            <label for="">Name</label>
+            <input type="text" value="http://" required maxlength="100" placeholder="Enter your name" name="user_name">
+        </div>
+        <div class="form-row">
+            <label for="">Comment</label>
+            <textarea maxlength="300"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="">Age</label>
+            <input type="number" required max="35" min="18" name="age">
+        </div>
+        <div class="form-row">
+            <label for="">Color</label>
+            <input type="color" name="color">
+        </div>
+        <div class="form-row">
+            <label for="">Date</label>
+            <input type="date" min="2023-06-13" max="2023-06-20">
+        </div>
+        <div class="form-row">
+            <label for="">Date Time</label>
+            <input type="datetime-local">
+        </div>
+        <div class="form-row">
+            <label for="">Time</label>
+            <input type="time">
+        </div>
+        <div class="form-row">
+            <label for="">Range</label>
+            100
+            <input type="range" min="100" max="1000" value="200">
+            1000
+        </div>
+        <input type="file">
+        <div class="form-row">
+            <input type="submit" value="Save">
+            <input type="reset">
+        </div>
+    </form>
+</body>
+
+</html>

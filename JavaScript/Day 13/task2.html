@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 700px;
+            height: 400px;
+            padding: 10px;
+            border: 1px red solid;
+            margin: auto;
+        }
+
+        ul li {
+            border: 1px black solid;
+        }
+
+        .parent * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <input type="text" id="inp">
+        <button onclick="getData()">Click</button>
+        <span id="cou"></span>
+        <ul id="res">
+
+        </ul>
+
+        <script>
+            var inp = document.getElementById("inp");
+            var res = document.getElementById("res");
+            var cou = document.getElementById("cou");
+
+            var count = 0;
+            function getData() {
+                count++;
+                var oldHTML = res.innerHTML;
+                res.innerHTML = oldHTML + `<li> ${inp.value} <i>X</i> </li>` //get; 
+                inp.value = ""; //set
+                cou.innerText = count;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

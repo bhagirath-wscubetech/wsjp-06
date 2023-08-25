@@ -1,0 +1,9 @@
+@media (max-width:768px) {
+    #banner-section h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #header-search {
+        width: 100%;
+    }
+}

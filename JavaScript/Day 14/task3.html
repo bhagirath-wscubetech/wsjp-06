@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .col {
+            width: 300px;
+            height: 500px;
+            float: left;
+        }
+
+        .parent {
+            width: 400px;
+            height: 400px;
+            box-shadow: 0px 0px 3px grey;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col">
+        <img src="img/c1.jpg" width="150px" alt="" onmouseenter="getSrc(this)">
+        <img src="img/c2.jpg" width="150px" alt="" onmouseenter="getSrc(this)">
+        <img src="img/c3.jpg" width="150px" alt="" onmouseenter="getSrc(this)">
+        <img src="img/c4.jpg" width="150px" alt="" onmouseenter="getSrc(this)">
+    </div>
+
+    <div class="parent">
+        <img src="img/c1.jpg" alt="" width="100%" height="100%" id="mainImg">
+    </div>
+    <script>
+        var mainImg = document.getElementById("mainImg");
+        function getSrc(elem) {
+            // console.log(elem.src)
+            mainImg.src = elem.src
+        }
+    </script>
+</body>
+
+</html>

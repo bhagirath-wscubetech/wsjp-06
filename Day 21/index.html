@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px red solid;
+            animation-name: box;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes box {
+            0% {
+                background: red;
+                top: 0;
+                left: 0;
+            }
+
+            10% {
+                background: blue;
+                top: 0;
+                left: 500px;
+            }
+            60% {
+                background: yellow;
+                top: 500px;
+                left: 500px;
+            }
+
+            90% {
+                background: goldenrod;
+                top: 500px;
+                left: 0;
+            }
+
+            100% {
+                background: palevioletred;
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

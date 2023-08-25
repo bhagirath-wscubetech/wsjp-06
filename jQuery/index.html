@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px red solid;
+        }
+
+        #test {
+            width: 200px;
+            height: 200px;
+            border: 1px black solid;
+        }
+
+        .demo {
+            width: 200px;
+            height: 200px;
+            border: 1px rgb(34, 32, 16) solid;
+        }
+        .demo h3{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Click</button>
+    <div class="box"></div>
+    <div id="test"></div>
+    <div class="demo">
+        <h3>Hello</h3>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        const box = $(".box");
+        const box2 = $("#test");
+        const heading = $(".demo h3")
+        console.log(box);
+
+        $("#btn").dblclick(
+            function () {
+                box.slideUp();
+                box2.hide(4000);
+                heading.fadeIn(3000);
+                console.log(heading.html("Hellllllloo"));
+            }
+        )
+
+    </script>
+</body>
+
+</html>

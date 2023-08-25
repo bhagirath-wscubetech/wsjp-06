@@ -1,0 +1,37 @@
+<script>
+    var num = 15;
+    var isPrime = true;
+
+    for (var i = 2; i < num; i++) {
+        if(num % i == 0){
+            isPrime = false;
+            break;
+        }
+    }
+
+    if(isPrime == true){
+        console.log('num is prime')
+    }else{
+        console.log('num is not prime')
+    }
+
+
+    // var num = 215;
+
+    // var sum = 0;
+    // while(num>0){
+    //     var r = num % 10;
+    //     sum += r;
+    //     num = parseInt(num / 10);
+    // }
+
+    // console.log(sum);
+
+
+    // var num = "215";
+    // var sum = 0;
+    // for (n of num) {
+    //     sum += parseInt(n);
+    // }
+    // console.log(sum);
+</script>

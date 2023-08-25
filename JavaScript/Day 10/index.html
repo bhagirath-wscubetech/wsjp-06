@@ -1,0 +1,28 @@
+<script>
+    var details = {
+        name: "John",
+        age: 24,
+        luckyNumber: 26,
+        gender: "M",
+        indian: true,
+        getData: function () {
+            //console.log("The age of " + details.name + " is " + details.age); ES5
+            //console.log(`The age of ${details.name} is ${details.age}`); // ES6 -> Template Literals
+            console.log(`The age of ${this.name} is ${this.age}`);
+        }
+    }
+
+    var details2 = {
+        name: "Jenny",
+        age: 28,
+        luckyNumber: 6,
+        gender: "F",
+        indian: false,
+        getData: function () {
+            console.log(`The age of ${this.name} is ${this.age}`);
+        }
+    }
+
+    details.getData();
+    details2.getData();
+</script>

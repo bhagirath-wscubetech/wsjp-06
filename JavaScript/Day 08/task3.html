@@ -1,0 +1,20 @@
+<script>
+    function filterData(nums) {
+        var result = [];
+        for (var i = 0; i < nums.length; i++) {
+            if (nums[i] % 3 == 0) {
+                result.push(nums[i]);
+            }
+        }
+        return result;
+    }
+
+    var a = [18, 27, 21,03, 20, 15, 22, 39, 24, 29];
+    var b = [40,306,40,200,30,51,33,60,35];
+
+    var res = filterData(a);
+    console.log(res);
+    
+    var res1 = filterData(b);
+    console.log(res1);
+</script>

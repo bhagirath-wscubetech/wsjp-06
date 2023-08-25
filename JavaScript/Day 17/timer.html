@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: verdana;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="res">0</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+
+    <script>
+        var res = document.querySelector("#res");
+        var intervalHolder;
+        var count = 0;
+        function start() {
+            intervalHolder = setInterval(
+                function () {
+                    count++;
+                    res.innerText = count;
+                },
+                1000
+            )
+        }
+        function stop() {
+            clearInterval(intervalHolder);
+        }
+
+        function reset() {
+            count = 0;
+            res.innerText = 0;
+            stop();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getData(a, b) {
+            return new Promise(
+                (res, rej) => {
+                    if (a == b) {
+                        res("A and B are equal");
+                    } else {
+                        rej("A and B are not equal");
+                    }
+                }
+            )
+        }
+
+        // console.log(getData(3,2));
+
+        getData(3, 3)
+            .then(
+                (success) => {
+                    console.log("s", success)
+                }
+            )
+            .catch(
+                (error) => {
+                    console.log("e", error);
+                }
+            )
+    </script>
+</body>
+
+</html>

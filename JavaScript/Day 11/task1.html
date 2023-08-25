@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="res">0</h1>
+    <button onclick="inc()">+</button>
+    <button onclick="desc()">-</button>
+
+    <script>
+        var resBox = document.getElementById("res");
+        var num = 0;
+        function inc() {
+            num++;
+            resBox.innerText = num; // set
+        }
+
+        function desc() {
+            num--;
+            resBox.innerText = num; // set
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px red solid;
+            font-size: 60px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <script>
+        // var box = document.querySelector(".box");
+        var box = document.querySelectorAll(".box");
+        console.log(box);
+
+        var box2 = document.getElementsByClassName("box");
+        console.log(box2);
+    </script>
+</body>
+
+</html>

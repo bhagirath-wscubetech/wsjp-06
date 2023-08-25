@@ -1,0 +1,20 @@
+<script>
+    var numbers = [
+        5, 10, 15, 28,02, 18, 22, 36, 48, 50, 131
+    ]
+    var sumEven = 0;
+    var sumOdd = 0
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+            sumEven += numbers[i]
+            // 0 + 10 // 10
+            // 10 + 28
+        } else {
+            sumOdd += numbers[i]
+            // 0+5 // 5
+            // 5 + 15 // 20
+        }
+    }
+    console.log(sumEven);
+    console.log(sumOdd);
+</script>

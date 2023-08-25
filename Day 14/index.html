@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-row {
+            margin: 5px;
+        }
+
+        /* input{
+            width: 200px;
+            transition: 0.5s;
+        }
+        input:focus{
+            width: 500px;
+        } */
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="form-row">
+            <label for="">Name</label>
+            <input type="text" autofocus placeholder="Enter your name" name="user_name">
+        </div>
+        <div class="form-row">
+            <label for="">Email</label>
+            <input type="email" name="user_email">
+        </div>
+        <div class="form-row">
+            <label for="">Password</label>
+            <input type="password" name="user_password">
+        </div>
+        <div class="form-row">
+            <label for="">Country:</label>
+            <select name="country" id="">
+                <option value="0">Select a country</option>
+                <option value="+91" selected>India</option>
+                <option value="+03">America</option>
+                <option value="+90">China</option>
+                <option value="+94">Sri Lanka</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="">Address</label>
+            <textarea name="addr" placeholder="Address"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="">Gender</label>
+
+            <input type="radio" checked name="user_gender" id="male" value="M">
+            <label for="male">Male</label>
+
+            <input type="radio" name="user_gender" id="female" value="F">
+            <label for="female">Female</label>
+        </div>
+
+        <div class="form-row">
+            <label for="">Hobbies</label>
+            <br>
+            <label for="dancing">Dancing</label>
+            <input type="checkbox" checked id="dancing" name="hobby" value="D">
+
+            <label for="s">Singing</label>
+            <input type="checkbox" checked name="hobby" id="s" value="S">
+
+            <label for="gmg">Gaming</label>
+            <input type="checkbox" name="hobby" id="gmg" value="G">
+        </div>
+
+
+        <div class="form-row">
+            <input type="submit" value="Save">
+            <input type="reset">
+        </div>
+    </form>
+</body>
+
+</html>

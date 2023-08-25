@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            max-width: 1000px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px black solid;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box">
+            <h1>Rahul</h1>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <button onclick="moveIt()">
+        >
+    </button>
+
+    <script>
+        var boxes = document.getElementsByClassName("box");
+        var current = 0;
+
+        console.log(boxes);
+        function moveIt() {
+            if (current == boxes.length - 1) {
+                // 3 == 5-1
+                // 4 == 4
+                return;
+            }
+            boxes[current + 1].innerHTML = boxes[current].innerHTML;
+            boxes[current].innerHTML = "";
+            current++; // current = 1
+            console.log(current);
+        }
+    </script>
+</body>
+
+</html>

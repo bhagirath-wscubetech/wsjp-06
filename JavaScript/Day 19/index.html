@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Lucida Sans';
+        }
+
+        .parent {
+            max-width: 1000px;
+            min-height: 300px;
+            border: 1px red solid;
+            margin: auto;
+            position: relative;
+        }
+
+        .tabs {
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            list-style: none;
+        }
+
+        .tabs li {
+            padding: 20px;
+            box-shadow: 0px 0px 2px grey;
+            border-bottom-color: transparent;
+            cursor: pointer;
+        }
+
+        p {
+            margin: 15px;
+            padding: 10px;
+            border: 1px #95a5a6 solid;
+            transition: 0.2s;
+            transform: scaleY(0);
+            visibility: hidden;
+            opacity: 0;
+            transform-origin: top center;
+            position: absolute;
+            top: 70px;
+            left: 0;
+        }
+
+        .active {
+            background: #3498db;
+            color: white;
+        }
+
+        .show {
+            transform: scaleY(1);
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <ul class="tabs">
+            <li class="active" onclick="active(this,'#first')">First</li>
+            <li onclick="active(this,'#second')">Second</li>
+            <li onclick="active(this,'#third')">Third</li>
+            <li onclick="active(this,'#fourth')">Fourth</li>
+            <li onclick="active(this,'#fifth')">Fifth</li>
+        </ul>
+        <p id="first" class="show">
+            <b>First</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eum enim dolorum iure,
+            facere soluta labore officiis? Accusantium numquam quos labore vero delectus inventore ducimus, error
+            tempora ab, quod minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut iure optio
+            cupiditate suscipit quibusdam rerum, nihil et laborum omnis ducimus id quo fuga ab eveniet dicta mollitia
+            repellat iusto.
+        </p>
+
+        <p id="second">
+            <b>Second</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eum enim dolorum iure,
+            facere soluta labore officiis? Accusantium numquam quos labore vero delectus inventore ducimus, error
+            tempora ab, quod minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut iure optio
+            cupiditate suscipit quibusdam rerum, nihil et laborum omnis ducimus id quo fuga ab eveniet dicta mollitia
+            repellat iusto.
+        </p>
+
+
+        <p id="third">
+            <b>Third</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eum enim dolorum iure,
+            facere soluta labore officiis? Accusantium numquam quos labore vero delectus inventore ducimus, error
+            tempora ab, quod minus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ut iure optio
+            cupiditate suscipit quibusdam rerum, nihil et laborum omnis ducimus id quo fuga ab eveniet dicta mollitia
+            repellat iusto.
+        </p>
+
+        <p id="fourth">
+            <b>Fourth</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor corporis neque placeat nobis ex
+            voluptatum exercitationem molestiae, quas praesentium nam iusto, quaerat consequatur, veritatis quae hic
+            deserunt. Est, iure cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor corporis neque
+            placeat nobis ex voluptatum exercitationem molestiae, quas praesentium nam iusto, quaerat consequatur,
+            veritatis quae hic deserunt. Est, iure cumque?
+        </p>
+        <p id="fifth">
+            <b>Fifth</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor corporis neque placeat nobis ex
+            voluptatum exercitationem molestiae, quas praesentium nam iusto, quaerat consequatur, veritatis quae hic
+            deserunt. Est, iure cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor corporis neque
+            placeat nobis ex voluptatum exercitationem molestiae, quas praesentium nam iusto, quaerat consequatur,
+            veritatis quae hic deserunt. Est, iure cumque?
+        </p>
+    </div>
+
+    <script>
+        var tabItems = document.querySelectorAll(".tabs li");
+        var paras = document.querySelectorAll(".parent p");
+
+        function active(elem, target) {
+            tabItems.forEach(
+                function (item) {
+                    item.classList.remove("active");
+                }
+            )
+            paras.forEach(
+                function (para) {
+                    para.classList.remove("show");
+                }
+            )
+            elem.classList.add('active');
+            setTimeout(
+                function () {
+                    document.querySelector(target).classList.add("show");
+                },
+                200
+            )
+        }
+
+
+        // tabItems.forEach(
+        //     function (item) {
+        //         item.addEventListener(
+        //             "click",
+        //             function(event){
+        //                 // console.log(event.target);
+        //                 event.target.classList.add('active');
+        //             }
+        //         )
+        //     }
+        // )
+    </script>
+</body>
+
+</html>

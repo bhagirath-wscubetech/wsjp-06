@@ -1,0 +1,19 @@
+<script>
+    const ages = [
+        50, 40, 10, 70, 30, 74, 13, 17, 20, 19, 12, 4
+    ]
+
+    console.log(ages);
+
+    const newData = ages.filter(
+        (d, i) => {
+            if (d >= 18 && d <= 35) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    )
+
+    console.log(newData);
+</script>

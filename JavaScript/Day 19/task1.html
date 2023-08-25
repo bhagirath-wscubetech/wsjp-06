@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- `${}` -->
+    <button onclick="obj.getData()">Click</button>
+    <script>
+
+        var name = `
+            <li>
+                Item 
+                <span> X </span>
+            </li>
+        `;
+
+        var obj = {
+            uname: "Bhagirath",
+            company: "WsCube Tech",
+            getData: function () {
+                console.log(this);
+                window.setTimeout(
+                    function () {
+                        console.log(this);
+                    },
+                    3000
+                )
+                window.setTimeout(
+                    () => {
+                        console.log(this);
+                    },
+                    5000
+                )
+            }
+        }
+        // var greet = (a, b) => {
+        //     return a + b;
+        // }
+        // var x = greet(4, 4);
+        // var y = greet(14, 4);
+        // console.log(x, y);
+    </script>
+</body>
+
+</html>

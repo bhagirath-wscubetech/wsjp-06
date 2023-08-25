@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            gap: 20px;
+        }
+
+        div {
+            width: 300px;
+            border: 2px firebrick solid;
+            height: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Hello</h1>
+    </div>
+    <button onclick="moveIt(0,1)">></button>
+
+    <div class="box"></div>
+
+    <button onclick="moveIt(1,2)">></button>
+
+    <div class="box"></div>
+
+    <button onclick="moveIt(2,3)">></button>
+
+    <div class="box"></div>
+
+    <script>
+        var boxes = document.getElementsByClassName("box");
+        console.log(boxes);
+
+        function moveIt(from, to) {
+            boxes[to].innerHTML = boxes[from].innerHTML;
+            boxes[from].innerHTML = "";
+
+            // boxes[1].innerHTML = boxes[0].innerHTML
+            // boxes[2].innerHTML = boxes[1].innerHTML
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #parent {
+            width: 500px;
+            height: 500px;
+            border: 1px red solid;
+        }
+
+        .box {
+            width: 700px;
+            gap: 10px;
+            height: 150px;
+            display: flex;
+            border: 1px black solid;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+        .color-box {
+            width: 500px;
+            display: flex;
+            height: 100px;
+        }
+
+        .color-box div {
+            width: 30px;
+            height: 30px;
+            border: 1px grey solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugit vero, accusantium rem porro ducimus
+        possimus voluptas aperiam facere nostrum incidunt nobis at expedita, animi quos mollitia, dolore beatae.
+        Voluptatem?
+    </div>
+    <button onclick="incFont()">+</button>
+    <button onclick="descFont()">-</button>
+
+    <div class="color-box">
+        <div style="background-color: red;" onclick="changeColor('red')"></div>
+        <div style="background-color: blue;" onclick="changeColor('blue')"></div>
+        <div style="background-color: green;" onclick="changeColor('green')"></div>
+        <div style="background-color: yellow;" onclick="changeColor('yellow')"></div>
+        <div style="background-color: palegoldenrod;" onclick="changeColor('palegoldenrod')"></div>
+    </div>
+    <div class="box">
+        <img src="img/c1.jpg" alt="" onclick="changeImg(this)">
+        <img src="img/c2.jpg" alt="" onclick="changeImg(this)">
+        <img src="img/c3.jpg" alt="" onclick="changeImg(this)">
+        <img src="img/c4.jpg" alt="" onclick="changeImg(this)">
+    </div>
+
+    <script>
+        var font = 16;
+        var parentBox = document.getElementById("parent");
+
+        function changeColor(colorName) {
+            parentBox.style.color = colorName;
+        }
+        function changeImg(elem) {
+            // console.log(elem.src);
+            // parentBox.style.backgroundImage = "url(" + elem.src + ")";
+            parentBox.style.backgroundImage = `url(${elem.src})`;
+        }
+        function incFont() {
+            if (font == 30) {
+                return;
+            }
+            font += 2;
+            // font = font + 2
+            parentBox.style.fontSize = font + "px";
+        }
+        function descFont() {
+            if (font == 16) {
+                return;
+            }
+            font -= 2;
+            // font = font + 2
+            parentBox.style.fontSize = font + "px";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" onmouseenter="addColor(this)" onmouseleave="removeColor(this)"></div>
+    <script>
+
+        function addColor(box) {
+            box.style.backgroundColor = "red";
+            // background-color -> backgroundColor
+            // font-family -> fontFamily
+        }
+        function removeColor(box) {
+            box.style.backgroundColor = "";
+        }
+    </script>
+</body>
+
+</html>

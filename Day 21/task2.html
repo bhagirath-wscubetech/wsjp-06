@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 1px white solid;
+            border-radius: 50%;
+            position: relative;
+            animation-name: rotate;
+            display: flex;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .planet {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: orange;
+            position: absolute;
+            left: 140px;
+            top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="planet"></div>
+    </div>
+</body>
+
+</html>

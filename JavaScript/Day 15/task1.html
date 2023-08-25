@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        /* 1rem = 16px */
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: verdana;
+        }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 15px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            /* 2.5 time of html font size */
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: end;
+        }
+
+        .btns button {
+            width: 30px;
+            margin: 5px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="btns">
+            <button onclick="incFont()">+</button>
+            <button onclick="descFont()">-</button>
+        </div>
+        <h1>WsCube Tech</h1>
+        <h3>
+            Myself Bhagirath Giri
+        </h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus deleniti saepe praesentium eum?
+            Recusandae expedita dignissimos id quaerat voluptate! Repellendus dolores nemo vero architecto quia est
+            harum amet earum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus deleniti saepe praesentium eum?
+            Recusandae expedita dignissimos id quaerat voluptate! Repellendus dolores nemo vero architecto quia est
+            harum amet earum!
+        </p>
+
+        <h2>The testing title here</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus deleniti saepe praesentium eum?
+            Recusandae expedita dignissimos id quaerat voluptate! Repellendus dolores nemo vero architecto quia est
+            harum amet earum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus deleniti saepe praesentium eum?
+            Recusandae expedita dignissimos id quaerat voluptate! Repellendus dolores nemo vero architecto quia est
+            harum amet earum!
+        </p>
+    </div>
+    <script>
+        var font = 16;
+        var htmlTag = document.getElementsByTagName("html");
+        function incFont() {
+            if (font == 30) {
+                return;
+            }
+            font += 2;
+            htmlTag[0].style.fontSize = font + "px";
+        }
+        function descFont() {
+            if (font == 16) {
+                return;
+            }
+            font -= 2;
+            htmlTag[0].style.fontSize = font + "px";
+        }
+    </script>
+</body>
+
+</html>

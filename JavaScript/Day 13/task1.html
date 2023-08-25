@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 700px;
+            height: 400px;
+            padding: 10px;
+            border: 1px red solid;
+            margin: auto;
+        }
+
+        .parent * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+            <input type="text" id="inp" onkeyup="getData()">
+            <!-- <button onclick="getData()">Click</button> -->
+            <p id="res"></p>
+
+        <script>
+            var inp = document.getElementById("inp");
+            var res = document.getElementById("res");
+            function getData() {
+                res.innerText = inp.value //get; 
+                //inp.value = ""; //set
+            }
+        </script>
+    </div>
+</body>
+
+</html>

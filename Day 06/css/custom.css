@@ -1,0 +1,12 @@
+.box {
+    height: 700px;
+    width: 500px;
+    background: red url(../img/c3.jpg) no-repeat left center;
+    border: 3px black solid;
+}
+
+/* 
+
+
+
+*/

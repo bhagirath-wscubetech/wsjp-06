@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 500px;
+            height: 20px;
+            box-shadow: 0px 0px 2px grey;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+        }
+
+        #inner {
+            width: 0%;
+            height: 100%;
+            transition: 1s;
+            background: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" onkeyup="getData(this)">
+    <div class="outer">
+        <div id="inner"></div>
+    </div>
+    <script>
+        var inner = document.getElementById("inner");
+        function getData(inp) {
+            // console.log(inp.value);
+            var len = inp.value.length;
+            if (len > 0 && len <= 5) {
+                inner.style.width = "30%"
+                inner.style.background = "lightcoral"
+            } else if (len > 5 && len <= 10) {
+                inner.style.width = "60%"
+                inner.style.background = "lightblue"
+            } else if (len > 10) {
+                inner.style.width = "100%"
+                inner.style.background = "lightgreen"
+            } else {
+                inner.style.width = "0%"
+
+            }
+        }
+    </script>
+</body>
+
+</html>
