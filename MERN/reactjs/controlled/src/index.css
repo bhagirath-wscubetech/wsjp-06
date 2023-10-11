@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.container {
+  width: 1100px;
+  height: 1000px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.box {
+  width: 250px;
+  box-shadow: 0px 0px 2px grey;
+}
+
+.box h4 {
+  text-align: center;
+  font-weight: normal;
+}

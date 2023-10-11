@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header,
+footer {
+  height: 56px;
+}
+
+.content {
+  height: calc(100vh - 112px);
+}
+
+.footer {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: 1rem;
+}
+
+.footer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.footer li {
+  padding: 0 0.5rem;
+}
+
+.footer a {
+  color: #fff;
+}
