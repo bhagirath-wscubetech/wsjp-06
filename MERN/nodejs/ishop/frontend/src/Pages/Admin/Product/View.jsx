@@ -3,10 +3,10 @@ import { Context } from '../../../MainContext';
 import { Link } from "react-router-dom";
 
 const View = () => {
-    const { category, fetchCategory, catImgUrl } = useContext(Context);
+    const { product, fetchProduct, proImgUrl } = useContext(Context);
     useEffect(
         () => {
-            fetchCategory();
+            fetchProduct();
         },
         []
     )
@@ -29,7 +29,13 @@ const View = () => {
                                 Image
                             </th>
                             <th scope="col" className="px-6 py-3">
+                                Price
+                            </th>
+                            <th scope="col" className="px-6 py-3">
                                 Status
+                            </th>
+                            <th scope="col" className="px-6 py-3">
+                                Best Seller
                             </th>
                             <th>
                                 Action
@@ -38,23 +44,31 @@ const View = () => {
                     </thead>
                     <tbody>
                         {
-                            category.map(
-                                (cat) => {
-                                    return <tr key={cat._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            product.map(
+                                (prod) => {
+                                    return <tr key={prod._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            {cat.name}
+                                            {prod.name}
                                         </th>
                                         <td className="px-6 py-4">
-                                            {cat.slug}
+                                            {prod.slug}
                                         </td>
                                         <td className="px-6 py-4">
-                                            <img width={100} src={catImgUrl + cat.image} alt="" />
+                                            <img width={100} src={proImgUrl + prod.image} alt="" />
                                         </td>
                                         <td className="px-6 py-4">
-                                            {cat.status ? 'Active' : 'Inactive'}
+                                            <del> ₹ {prod.price}</del> <br />
+                                            {prod.discount}% off <br />
+                                            ₹ {prod.final}
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            {prod.status ? 'Active' : 'Inactive'}
+                                        </td>
+                                        <td className="px-6 py-4">
+                                            {prod.best_seller ? 'Yes' : 'No'}
                                         </td>
                                         <td>
-                                            <Link to={"/admin/category/edit/" + cat._id}>
+                                            <Link to={"/admin/product/edit/" + prod._id}>
                                                 <button className='p-3 border border-blue-400'>Edit</button>
                                             </Link>
                                         </td>

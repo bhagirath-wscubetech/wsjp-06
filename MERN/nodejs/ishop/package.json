@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "name": "ishop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd frontend && npm start\" \"cd backend && nodemon index\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

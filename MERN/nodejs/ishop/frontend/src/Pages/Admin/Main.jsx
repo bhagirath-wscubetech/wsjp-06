@@ -98,8 +98,8 @@ const SideMenu = () => {
             <ul className='pl-3 mt-3'>
                 {
                     menu.map(
-                        (item) => {
-                            return <SideItem item={item} />
+                        (item, index) => {
+                            return <SideItem key={index} item={item} />
                         }
                     )
                 }
@@ -126,9 +126,9 @@ const SideItem = ({ item }) => {
                     <ul className={`rounded-lg my-2 py-2 bg-white text-black pl-4 ${toggle ? 'block' : 'hidden'}`}>
                         {
                             item.children.map(
-                                (child) => {
+                                (child,index) => {
                                     return (
-                                        <Link to={child.url}>
+                                        <Link key={index} to={child.url}>
                                             <li>{child.name}</li>
                                         </Link>
                                     )
